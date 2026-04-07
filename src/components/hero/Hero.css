@@ -1,0 +1,148 @@
+.hero .container .img_hero {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-self: start;
+  position: relative; 
+}
+.star {
+  position: absolute;
+  top: -80px;    
+  left: -80px;  
+  width: 230px;
+  z-index: 1; 
+  transform: none; 
+}
+.cicle{
+  position: absolute;
+  width: 280px;
+  left: 40%;
+  transform: translateX(-40%);
+  z-index: 1;
+  bottom: 0;
+}
+.hero{
+  position: relative;
+  z-index: 2;
+  padding: 150px 0 80px 0 ;
+  background: var(--bg-wild-blue-yonder);
+  display: flex;
+  flex-direction: column  ;
+  align-items: center;
+  justify-content: center;
+}
+.hero .container{
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.hero .container .info{
+  flex: 1;
+}
+.hero .container .img_hero {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-self: start;
+}
+.hero .container .img_hero img:not(.star) {
+  position: relative;
+  z-index: 2;
+  width: 96%;
+}
+.hero .container .info span{
+  font-size: 40px;
+  font-weight: 600;
+}
+.hero .container .info h1{
+  font-size: 70px;
+  margin: 30;
+}
+.hero .container .info p{
+  font-size: 23px;
+  line-height: 2;
+}
+.hero .container .info button{
+  padding: 15px 30px;
+  font-size: 15px;
+}
+.container2{
+  display: none;
+}
+@media (min-width: 991px) {
+  .hero {
+    height: 100vh;
+  }
+}
+@media (max-width: 1100px) {
+  .star{
+    width: 200px;
+  }
+  .cicle{
+    width: 220px;
+  }.hero .container .info span{
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .hero .container .info h1{
+    font-size: 49px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }.hero{
+    padding: 140px 0 100px 0;
+  }
+  .hero .container .info p{
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .star{
+    position: absolute;
+    top: -50px;    
+    left: -60px;  
+    width: 150px;
+  }
+  .cicle{
+    width: 200px;
+  }.hero .container .info span{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .hero .container .info h1{
+    font-size: 30px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }.hero{
+    padding: 100px 0;
+  }
+  .hero .container .info p{
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  
+  .hero .container .info button,
+  .hero .container .info p{
+    display: none;
+  }
+  .hero .container{
+    gap: 20px;
+    align-items: center;
+  }
+  .container2{
+    display: flex;
+    flex-direction: column;
+  }
+  .container2 p{
+    font-size: 16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+  }
+  .container2 button{
+    margin: auto;
+    
+  }.container2 a {
+  display: block;
+  margin-right: auto;
+}
+}

@@ -1,0 +1,17 @@
+.scpical_button,
+#viewAll{
+  padding: 20px 40px ;
+  background-color: var(--bg-orange-crayola);
+  width: fit-content;
+  margin: auto;
+}
+.featured_products .container{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+.scpical_button:hover{
+  color: white;
+  border-color: rgb(250, 250, 250);
+}

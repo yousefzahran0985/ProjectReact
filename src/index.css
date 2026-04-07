@@ -1,0 +1,269 @@
+:root {
+  --bg-white: hsla(0, 0%, 100%, 1);
+  --bg-gainsboro: hsla(154, 10%, 86%, 1);
+  --bg-wild-blue-yonder: hsla(227, 39%, 75%, 1);
+  --bg-orange-crayola: hsla(18, 97%, 62%, 1);
+  --bg-roman-silver-alpha-30: hsla(210, 9%, 57%, 0.3);
+  --text-orange-crayola: rgb(255, 94, 25);
+  --text-blue-crayola: hsla(216, 98%, 52%, 1);
+  --text-eerie-black: hsla(210, 11%, 15%, 1);
+  --text-eerie-black-2: hsla(0, 0%, 7%, 1);
+  --text-black: hsla(270, 100%, 0%, 1);
+  --border-eerie-black: hsla(0, 0%, 7%, 1);
+  --fontFamily-inter: 'Inter', sans-serif;
+  --fontFamily-clashDisplay: 'Roboto Condensed', sans-serif;
+}
+*{
+  box-sizing: border-box;
+}
+a{
+  text-decoration:none;
+  color: black;
+}
+ul{
+  list-style: none;
+}
+body {
+  font-family: var(--fontFamily-clashDisplay);
+  margin: 0;
+}
+h1,h2{
+  font-family: var(--fontFamily-inter);
+}
+button{
+  cursor: pointer;
+  padding: 10px 17px ;
+  font-size: 16px;
+  box-shadow: 4px 4px 0px rgb(0, 0, 0);
+  transition: .3s;
+  border: 2px black solid;
+  -webkit-tap-highlight-color: transparent;
+}
+i,
+a{
+  -webkit-tap-highlight-color: transparent;
+}
+button:hover{
+  border-color: var(--bg-orange-crayola);
+  color: var(--text-orange-crayola);
+  box-shadow: none;
+}
+.container2,
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.section{
+  padding: 130px 0 50px 0;
+}
+.section_h1{
+  font-size: 53px;
+  text-align: center;
+}
+.fa-star-half-stroke,
+.fa-star{
+  color: rgb(255, 217, 0);
+}
+.Add_to_Wishlist{
+  color:#da3300;
+  box-shadow: 3px 3px 0px #696969;
+  border-color: #ffac97;
+}
+.hover-text-under:hover{
+  text-decoration: underline
+}
+.offerProduct{
+  position: absolute;
+  left: 14%;
+  top: 10px;
+  color: white;
+  cursor: pointer;
+  padding: 5px 17px ;
+  font-size: 16px;
+  background-color: #bba766;
+}
+.oldPrice{
+  color: #696969;
+}
+.smallFoto{
+  display: flex;
+  gap: 10px;
+}
+.smallFoto img{
+  width: 60px;
+  height: 70px;
+  cursor: pointer;
+  opacity: .8;
+}
+.smallFoto img:hover,
+.smallFoto img.active{
+  opacity: 1;
+  border: 2px solid rgb(255, 168, 7);
+}
+.size{
+  display: flex;
+  align-items: center;
+}
+.size ul{
+  display: flex;
+  gap: 20px;
+}
+.size ul li{
+  background-color: #e3e3e3;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.size ul li.active{
+  border: rgb(255, 174, 0) 3px solid;
+}
+.filter-section {
+  padding: 50px 0 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ================= SEARCH ================= */
+
+.search-box {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+}
+.filter-section {
+  position: sticky;
+  top: 90px;
+  z-index: 100;
+  background: #fff;
+  padding: 10px 0 30px 0;
+}
+.search-box i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #777;
+  font-size: 14px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 15px 12px 40px;
+  border-radius: 0; /* خلي الزوايا كلها 90° يعني هنا 0 */
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+  background: #fafafa;
+}
+
+.search-input:focus {
+  border-color: #000;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,0.08);
+}
+
+/* ================= CATEGORIES ================= */
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.category-btn {
+  padding: 8px 18px;
+  border-radius: 0; 
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s ease;
+}
+
+.category-btn:hover {
+  background: var(--bg-orange-crayola);
+  color: #fff;
+  border-color: var(--bg-orange-crayola);
+}
+
+.category-btn.active {
+  box-shadow: none;
+  background: var(--bg-orange-crayola);
+  color: #fff;
+  border-color: var(--bg-orange-crayola);
+}
+@media (max-width: 1100px) {
+  .filter-section {
+  padding: 50px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  top: 70px;
+  align-items: center;
+}
+}
+.my-toaster-container {
+  top: 100px !important;
+}
+
+@media (max-width: 767px) {
+  .my-toaster-container {
+    top: 63px !important;
+  }
+  .filter-section {
+    top: 40px;
+  }
+  .productDetails .container {
+    flex-direction: column;
+    font-size: 13px;
+    gap: 20px
+  };
+  .productDetails .container .info{
+    padding: 0 !important;
+  }
+  .size ul{
+  gap: 10px;
+}
+.productDetails .container button{
+  font-size: 12px;
+  padding: 7px;
+}.section{
+  padding: 80px 0;
+  
+} button {
+    font-size: 15px;
+    transition: all 0.4s ease-in-out;
+    padding: 8px 15px; /* يفضل تصغير الـ padding شوية للموبايل */
+    box-shadow: 3px 3px 0px rgb(0, 0, 0);
+    border: 2px black solid;
+    outline: none; /* عشان تشيل إطار التحديد الافتراضي */
+    -webkit-tap-highlight-color: transparent; /* بيشيل اللون الأزرق الشفاف اللي بيظهر في أندرويد وقت اللمس */
+  }
+
+  /* نلغي أي تأثير للهوفر على الموبايل عشان ميعلقش */
+  button:hover {
+    border-color: black;
+    color: black;
+    box-shadow: 3px 3px 0px rgb(0, 0, 0);
+  }
+
+  /* التأثير يظهر هنا فقط وقت الضغط */
+  button:active {
+    transition: all 0.1s;
+    transform: scale(0.96);
+    border-color: var(--bg-orange-crayola);
+    color: var(--text-orange-crayola);
+    box-shadow: 0px 0px 0px transparent; /* بيختفي تماماً */
+  }
+  button.notActiveMinus:active{
+    transform: scale(1);
+  }
+  /* الوضع الافتراضي للشاشات الكبيرة */
+
+}

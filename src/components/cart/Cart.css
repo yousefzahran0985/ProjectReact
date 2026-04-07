@@ -1,0 +1,108 @@
+.products-cart{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-cart img{
+    width: 140px;
+    justify-self: flex-end;
+}
+.quantity{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+.quantity button{
+    padding: 4px;
+    color: black;
+    box-shadow: 2px 2px 0px rgb(0, 0, 0);
+}
+.quantity button:hover{
+    box-shadow: none;
+}
+.quantity button.notActiveMinus{
+  opacity: 0.3;
+}
+.quantity button.notActiveMinus:hover{
+  box-shadow: 2px 2px 0px rgb(0, 0, 0);
+  color:black;
+  border-color: black;
+  cursor:initial;
+}
+.total-price{
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    gap: 20px;
+}
+.total-price .title{
+    display: flex;
+    justify-content: space-between;
+}
+/* العناوين */
+.title-cart ul {
+  display: grid;
+  grid-template-columns: 60px auto 150px 100px 110px; /* حسب حجم الصورة والكمية والسعر */
+  text-align: center;
+  font-weight: bold;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* كل منتج */
+.product-cart {
+  display: grid;
+  grid-template-columns: 120px auto 150px 100px 110px; /* نفس الأعمدة زي العناوين */
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+.cart-product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.cart-product-size {
+  background-color: #f3f3f3;
+  color: #2b2b2b;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid #535353;
+  display: inline-block;
+}
+.cart-product-info p {
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .buttonRemoveCart{
+    padding: 5px;
+    width: 80px;
+    box-shadow: 2px 2px 0px rgb(0, 0, 0);
+  }
+  .quantity button{
+    padding: 2px;
+    box-shadow: 2px 2px 0px rgb(0, 0, 0);
+  }
+  .product-cart img{
+    width: 60px;
+  }
+  .cart-scroll {
+    overflow-x: auto;
+  }
+  .title-cart ul,
+  .product-cart {
+    min-width: 650px; 
+  }
+  .cart-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.cart-scroll::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+}

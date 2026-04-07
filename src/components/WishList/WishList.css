@@ -1,0 +1,87 @@
+.Wishlist .container{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.Wishlist .container ul{
+  display: grid;
+  grid-template-columns: auto 70px 180px ; 
+}
+.Wishlist .container ul li{
+  text-align: center;
+}
+.ProductWishlist{
+  display: grid;
+  grid-template-columns: auto auto 70px 180px ; 
+  align-items: center;
+}
+.ProductWishlist .price{
+  text-align: center;
+  color: rgb(255, 30, 0);
+}
+.ProductWishlist .action{
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.productsWhislist{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.productsWhislist .RemoveWishlist {
+  color: red;
+  box-shadow: none;
+  border: none;
+  background: #ffffff;
+  transition: .4s;
+}
+.productsWhislist .RemoveWishlist:hover{
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+/* ============================= */
+/* 📱 Mobile Horizontal Table Scroll */
+/* ============================= */
+.ProductWishlist img{
+    width: 150px;
+  }
+@media (max-width: 768px) {
+  /* 1. الحاوية الأساسية نسمح لها بالسكورول */
+  .wishlist-scroll {
+    overflow-x: auto;
+    width: 100%;
+    /* ده بيخلي شكل السكرول أنعم في الموبايل */
+    -webkit-overflow-scrolling: touch; 
+  }
+
+  /* 2. نحدد عرض أدنى للعناصر اللي جوه عشان "تزق" الحاوية وتعمل سكرول */
+  .Wishlist .container ul,
+  .productsWhislist {
+    min-width: 500px; /* القيمة دي تعتمد على حجم المحتوى بتاعك */
+    padding-bottom: 10px; /* مسافة عشان شريط السكرول ميبقاش لازق في الكلام */
+  }
+
+  /* تعديلات إضافية لتحسين الشكل في الموبايل */
+  .ProductWishlist img {
+    width: 70px;
+  }
+  
+  .Wishlist .container ul li,
+  .ProductWishlist .action button {
+    font-size: 12px;
+  }
+
+  .ProductWishlist .action button.addCart {
+    padding: 5px;
+    width: 80px;
+  }
+  .wishlist-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.wishlist-scroll::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+}
